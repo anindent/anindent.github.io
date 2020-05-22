@@ -7,6 +7,8 @@ description: >
 
 show_excerpts: true
 
+comments: true
+
 baseurl: ""
 url: ""
 
@@ -15,6 +17,10 @@ tag_page_dir: tag
 
 staticmanUrl: https://less--app.herokuapp.com/v2/entry/anindent/anindent.github.io/master/comments
 enableComments: true
+
+reCaptcha:
+  siteKey: 6LcIzfoUAAAAAClIqbmOQaAGdnEzDsajngqL0rTK
+  secret: r8AE4xyCdzBeYm1os6UNkYFIpQXgmqrzuY+sfnL8ybkKSCSIViOMzPo+vuwvvSto5cSXmn6CpauZboRUn5V6MGP3JIXlFvj4E5+rIXd8+4zT64rydGhWSMxn9w2REGOnmQksapzV7tRDRhbqwQcHT7hN8MKN4a8ILRu8hG/PEjRW9L9ijLVbE9yo5JbCchr10orM8t9QMDnlZHtkapTWcZ/wxP2YbW8k2tP2zhjxo/RMBupB4Du7I919iRUcEfnRyiXSFZJIfbf21EMYAelQCNXMyZrcfiqJPv00mSEsRlDdlA2Xf1Brb0kxwXNz+L+8w8XfRoUvtetc3W2ZawFmMPQ6Ka7Vszkkds8MVjfBFp4RUjqpNTU/VInEanKuUzDj6nRdDyo5EgfakJOvbh/CzKENA0Q4fH4olKnojC9+hm2puMLh73LA3YD9bJ+xVXHSx4/RId1n3qwQx6UKTKykZxO9WsLHaevtSwet2V632Whv12CSxzomHjbJ2lQdyjLpeOvI80MsRJ/CLYINi9rknCGbXfh1cmdkc38e+5fO9x/HdEaQ6jIHW+72trA2sZYTiCRWKzqREmGLGCHBwLMan2EpwDM5NHnioGi5YdnXwfVG0l4LtVHFjyUBjUeC4WtQnGh3KYbNitScKPwdalMfodJ1GPqglM7QTpvBN0Qy+Xc=
 
 minima:
   # skin: dark

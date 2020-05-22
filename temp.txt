@@ -1,9 +1,16 @@
 echo "# anindent.github.io" >> README.md
 git init
-git add README.md
+git config --global user.email "anindent@gmail.com"
+git config --global user.name "Anindent"
+git add .
 git commit -m "first commit"
 git remote add origin https://github.com/anindent/anindent.github.io.git
 git push -u origin master
 
 git remote add origin https://github.com/anindent/anindent.github.io.git
 git push -u origin master
+
+
+6LcIzfoUAAAAAClIqbmOQaAGdnEzDsajngqL0rTK ( site key )
+
+6LcIzfoUAAAAADy7Etsh-egrabPyvpnbRniM0_pA ( secret key )
