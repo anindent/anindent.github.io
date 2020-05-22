@@ -15,7 +15,7 @@ url: ""
 tag_page_layout: tag_page
 tag_page_dir: tag
 
-staticmanUrl: https://less-staticman.herokuapp.com/v2/entry/anindent/anindent.github.io/master/comments
+staticmanurl: https://less-staticman.herokuapp.com/v2/entry/anindent/anindent.github.io/master/comments
 enableComments: true
 
 reCaptcha:
