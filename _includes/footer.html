@@ -1,0 +1,99 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <script src="{{ "/js/search-script.js" | relative_url }}" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="">
+  
+  <!-- Configuration -->
+  <script>
+      SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/search.json'
+      })
+  </script>
+
+<script src="{{ '/js/jquery-3.4.1.min.js' | relative_url }}"></script>
+<script src="{{ '/js/cookie.js' | relative_url }}"></script>
+
+<script>
+    // dark mode switch
+    var setTheme = function(theme) {
+        if (theme === 'dark') {
+            // dark
+            $("body").removeClass("standard");
+            $("#preloader").removeClass("standard");
+            $("body").addClass("dark");
+            $("#preloader").addClass("dark");
+            $(".inner-switch").text("Light");
+            setCookie('Theme', 'dark', 30);
+        } else {
+            $("body").removeClass("dark");
+            $("#preloader").removeClass("dark");
+            $("body").addClass("standard");
+            $("#preloader").addClass("standard");
+            $(".inner-switch").text("Dark");
+            setCookie('Theme', 'standard', 30);
+        }
+    };
+
+    currentTheme = getCookie('Theme');
+    setTheme(currentTheme);
+
+    $(".inner-switch").on("click", function() {
+        if ($("body").hasClass("dark")) {
+            // standard
+            setTheme('standard');
+        } else {
+            // dark mode
+            setTheme('dark');
+        }
+    });
+</script>
+
+<script>
+  $(window).on('load', function() { // makes sure the whole site is loaded 
+      $('#status').fadeOut(); // will first fade out the loading animation 
+      $('#preloader').delay(350).fadeOut(); // will fade out the white DIV that covers the website. 
+      $('body').delay(350).css({
+          'overflow': 'visible'
+      });
+  });
+</script>
+
+
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="{{ 'feed.xml' | relative_url }}">
+            <svg class="svg-icon orange">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      {%- if site.author %}
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+        </ul>
+      {%- endif %}
+      </div>
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+      </div>
+    </div>
+
+    <div class="social-links">
+      {%- include social.html -%}
+    </div>
+
+  </div>
+
+</footer>

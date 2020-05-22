@@ -1,0 +1,19 @@
+comments:
+  allowedFields: ["name", "email", "url", "message", "replying_to"]
+  # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
+  allowedOrigins: ["anindent.ml"]
+  branch: "master"
+  filename: "comment-{@timestamp}"
+  format: "yaml"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
+  moderation: true
+  name: "anindent.ml"
+
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "message"]
+  transforms:
+    email: md5
